@@ -3,7 +3,7 @@
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col pt-8 sm:pt-0">
                 <span class="py-4">Welcome to the </span>
-                <div class="text-3xl text-gray-700"><span class="text-5xl">P</span>atient <span class="text-5xl">B</span>lood <span class="text-5xl">P</span>ressure Medical Records System</div>
+                <div class="text-4xl text-gray-700"><span class="text-5xl">P</span>atient <span class="text-5xl">B</span>lood <span class="text-5xl">P</span>ressure Medical Records System</div>
                 @if (Route::has('login'))
                     <div class="px-6 py-8 sm:block text-center">
                         @auth
