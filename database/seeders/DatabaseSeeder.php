@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\BloodPressureReading;
-use App\Models\Patient;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -28,10 +26,6 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-       // \App\Models\User::factory(10)->create();
-
-        Patient::factory(10)
-            ->has(BloodPressureReading::factory()->count(1), 'bloodPressureReadings')
-            ->create();
+        $this->call(PatientSeeder::class);
     }
 }
