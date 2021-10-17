@@ -10,6 +10,8 @@ use Rappasoft\LaravelLivewireTables\Views\Column;
 class BloodPressureReadingTable extends DataTableComponent
 {
 
+    protected $listeners = ['refreshComponent' => '$refresh'];
+
     public int $patientId;
 
     public function columns(): array

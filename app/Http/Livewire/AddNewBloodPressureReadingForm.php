@@ -35,6 +35,7 @@ class AddNewBloodPressureReadingForm extends Component
         ])->save();
 
         $this->cancelForm();
+        $this->emitTo('blood-pressure-reading-table', 'refreshComponent');
     }
 
     public function cancelForm()
