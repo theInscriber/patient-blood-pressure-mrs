@@ -1,6 +1,9 @@
 <?php
 
+use App\Exports\PatientsExport;
+use App\Models\Patient;
 use Illuminate\Support\Facades\Route;
+use \Maatwebsite\Excel\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +24,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/patients/{patient}', function (\App\Models\Patient $patient) {
+Route::get('/patients/{patient}', function (Patient $patient) {
     return view('show-patient', compact('patient'));
 })->middleware(['auth'])->name('patients.show');
+
+Route::get('/patients/export/csv', function () {
+    return (new PatientsExport(Patient::pluck('id')))->download('patients.csv', Excel::CSV);
+})->middleware(['auth'])->name('patients.export.csv');
 
 require __DIR__.'/auth.php';
