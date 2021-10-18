@@ -74,3 +74,11 @@ You can use the ones below to authenticate with API
     Password : Nurse@2021
 
 You can update the default Nurse credentials in the `database/seeders/DatabaseSeeder.php` 
+
+----------
+
+# Testing
+Run the command below to run tests
+
+
+    sail artisan test
