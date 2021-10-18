@@ -18,7 +18,7 @@ Clone the repository
 
 Switch to the repo folder
 
-    cd laravel-people-api
+    cd patient-blood-pressure-mrs
 
 Spin up Docker containers with Sail to start the local development environment
 
