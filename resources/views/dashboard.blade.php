@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div x-show="showAddNewForm">
-                        <livewire:add-new-patient />
+                        <livewire:add-new-patient-form />
                     </div>
                 </div>
                 <div class="p-6 bg-white border-b border-gray-200">

@@ -7,7 +7,7 @@ use App\Models\Patient;
 use Carbon\Carbon;
 use Livewire\Component;
 
-class AddNewPatient extends Component
+class AddNewPatientForm extends Component
 {
     public bool $showForm = false;
     public $firstName;
